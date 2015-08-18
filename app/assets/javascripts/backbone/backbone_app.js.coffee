@@ -9,3 +9,6 @@ window.BackboneApp =
   Collections: {}
   Routers: {}
   Views: {}
+
+# enable Backbone.Validation
+_.extend(Backbone.Model.prototype, Backbone.Validation.mixin);
