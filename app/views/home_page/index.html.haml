@@ -1,2 +1,11 @@
 %div#wrapper
   Welcome
+
+:javascript
+  $(function() {
+    var post = new BackboneApp.Models.Post();
+    post.set("title", "aa", {validate: true});
+    if(!post.isValid()) {
+      alert(post.validationError["title"]);
+    }
+  });
