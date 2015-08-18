@@ -13,6 +13,9 @@ gem 'therubyracer', platforms: :ruby
 gem "rails-backbone"
 gem 'backbone-validation-rails'
 
+gem 'haml_coffee_assets'
+gem 'execjs'
+
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
