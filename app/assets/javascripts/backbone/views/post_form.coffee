@@ -1,7 +1,7 @@
 class BackboneApp.Views.PostForm extends Backbone.View
 
   template: JST["backbone/templates/post_form"]
-  model: BackboneApp.Models.Post
+  model: new BackboneApp.Models.Post
   
   el: "#post_form_wrapper"
 
@@ -22,4 +22,4 @@ class BackboneApp.Views.PostForm extends Backbone.View
 
   formSubmitted: (e) =>
     e.preventDefault()
-    alert("proba wyslania")
+    @model.save({ title: $(@ui.title).val(), body: $(@ui.body).val() })
