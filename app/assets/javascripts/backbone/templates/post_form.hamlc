@@ -1,0 +1,9 @@
+%form#post_form
+  .field
+    %label Title
+    %input#post_form_title{name: "post_form_title", type: "text"}
+  .field
+    %label Body
+    %input#post_form_body{name: "post_form_body", type: "text"}
+  .actions
+    %input{value: 'Add a note', type: "submit"}

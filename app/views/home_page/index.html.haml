@@ -1,11 +1,19 @@
 %div#wrapper
-  Welcome
+  %p Welcome, add a note:
+  %div#post_form_wrapper
+    
+  %div#posts
+    %p Already added posts:
+    %ul
+      - @posts.each do |post|
+        %li= post.title + " " + post.body
+
 
 :javascript
   $(function() {
-    var post = new BackboneApp.Models.Post();
-    post.set("title", "aa", {validate: true});
-    if(!post.isValid()) {
-      alert(post.validationError["title"]);
-    }
+    var post_form = new BackboneApp.Views.PostForm();
+    //post.set("title", "aa", {validate: true});
+    //if(!post.isValid()) {
+    //  alert(post.validationError["title"]);
+    //}
   });
